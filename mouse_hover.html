@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse hover</title>
+</head>
+<body>
+    <div id="hoverbox" onmouseover="onhover()" onmouseout="onhoverout()">
+    <img id="hoverImage" src="alfham-copy.jpeg" alt="image" width="1000">
+    <div id="hoverText">Hover Me</div>
+    </div>
+</body>
+<script>
+    function onhover(){
+        document.getElementById('hoverText').innerText="Mouse Over";
+        document.getElementById('hoverImage').src="Medu-Vada.jpg";
+    }
+    function onhoverout(){
+        document.getElementById('hoverText').innerText="Mouse Out!";
+        document.getElementById('hoverImage').src="alfham-copy.jpeg";
+    }
+</script>
+</html>

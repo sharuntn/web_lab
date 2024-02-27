@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expression Evaluation</title>
+</head>
+<body>
+    <label for="expression">Enter an Expression</label>
+    <input type="text" id="expression">
+    <button onclick="evaluateExpression()">Evaluate</button>
+    <p id="result"></p>
+</body>
+<script>
+    function evaluateExpression(){
+        var expressionInput = document.getElementById('expression');
+        var resultParagraph = document.getElementById('result');
+        var expression = expressionInput.value;
+        var result = eval(expression)
+        if(!isNaN(result)){
+            resultParagraph.innerHTML='Result'+result;
+        }else{
+                resultParagraph.innerHTML='Error:invalid';
+        }
+    }
+</script>
+</html>

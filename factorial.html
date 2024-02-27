@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial</title>
+</head>
+<body>
+    Enter num: <input type="text" name="num" id="num">
+    <button onClick="factNumbr()">Factorial</button>
+    <input type="text" name="" id="answer">
+</body>
+<script>
+    function factNumbr(){
+        var n,i,fact,no;
+        fact=1;
+        no = Number(document.getElementById('num').value);
+        for(i=1;i<=no;i++){
+            fact = fact*i;
+        }
+        document.getElementById('answer').value=fact;
+    }
+</script>
+</html>

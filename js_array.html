@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <h1>JavaScript array demo</h1>
+</body>
+<script>
+    var fruits=['Apple','Orange','Bannana','Grapes'];
+    document.write('<p>Original Array:'+fruits.join(',')+'</p>');
+    document.write('<p>Element at Index 1:'+fruits[1]+'</p>');
+    fruits[2]='Mango';
+    document.write('<p>After modifying element at index 2: ' + fruits.join(', ')+ '</p>');
+    fruits.push('Pineapple');
+    document.write('<p>Array after adding pineapple: '+fruits.join(',')+'</p>');
+    var removed_element = fruits.pop();
+    document.write('<p>After deleteion:'+fruits.join(',')+'</p>');
+    var index = fruits.indexOf('Orange');
+    document.write('<p>Index of orange is:'+ index +'</p>');
+    document.write('<p>Length of array:'+fruits.length+'</p>');
+</script>
+</html>

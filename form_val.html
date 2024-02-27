@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+    <form action="" name="myform" onsubmit="validateForm()">
+        First Name:<input type="text" id="fname"><br>
+        Second Name:<input type="text" id="lname"><br>
+        Mob NO: <input type="tel" id="mob"><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+<script>
+    function validateForm(){
+        var fname = document.myform.fname.value;
+        var lname = document.myform.lname.value;
+        var mob = document.myform.mob.value;
+        if(fname.length==0){
+            alert("First Name cannot be blank");
+        }
+        else if(lname.length==0){
+            alert("Last name cannot be blank");
+        }
+        else if(mob.length<10 || mob.length==0){
+            alert("Mob number must 10 digit and cannot be blank");
+        }
+        else{
+            alert("Form validated");
+        }
+    }
+</script>
+</html>
